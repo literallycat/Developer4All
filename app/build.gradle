@@ -1,0 +1,33 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.literalcat.Developer4All'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.literalcat.Developer4All"
+        minSdk 27
+        targetSdk 34
+        versionCode 3
+        versionName "1.0.2"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    // LSPosed / Xposed API - compileOnly because it's provided by the framework at runtime.
+    compileOnly 'de.robv.android.xposed:api:82'
+
+}
